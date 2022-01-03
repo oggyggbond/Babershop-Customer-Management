@@ -1,0 +1,49 @@
+package com.barbershop.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HomeController {
+
+
+	@RequestMapping("bill")
+	public String bill() {
+		return "bill";
+	}
+
+	@RequestMapping("profile")
+	public String profile() {
+		return "profile";
+	}
+
+	@RequestMapping("promotion")
+	public String promotion() {
+		return "promotion";
+	}
+
+	@RequestMapping("404")
+	public String notFound() {
+		return "404";
+	}
+	@GetMapping(value = "/admin-home")
+	public ModelAndView index() {
+		ModelAndView mav = new ModelAndView("index");
+		return mav;
+	}
+	
+	@GetMapping(value = "/admin-edit")
+	public ModelAndView bill() {
+		ModelAndView mav = new ModelAndView("bill");
+		return mav;
+	}
+	
+	@GetMapping(value = "/admin-edit")
+	public ModelAndView index() {
+		ModelAndView mav = new ModelAndView("index");
+		return mav;
+	}
+}

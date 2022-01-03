@@ -1,0 +1,340 @@
+<%@ page language="java" pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Tell the browser to be responsive to screen width -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords"
+	content="wrappixel, admin Homepage, html css Homepage, web Homepage, bootstrap 5 admin, bootstrap 5, css3 Homepage, bootstrap 5 Homepage, Ample lite admin bootstrap 5 Homepage, frontend, responsive bootstrap 5 admin template, Ample admin lite Homepage bootstrap 5 Homepage template">
+<meta name="description"
+	content="Ample Admin Lite is powerful and clean admin Homepage template, inpired from Bootstrap Framework">
+<meta name="robots" content="noindex,nofollow">
+<title>Barbershop customer management</title>
+<!-- Favicon icon -->
+<link rel="icon" type="image/png" sizes="16x16"
+	href="${pageContext.servletContext.contextPath}/resources/assets/plugins/images/favicon.png">
+<!-- Custom CSS -->
+<link
+	href="${pageContext.servletContext.contextPath}/resources/assets/css/style.min.css"
+	rel="stylesheet">
+<link
+	href="${pageContext.servletContext.contextPath}/resources/assets/vendor/fontawesome-free/css/all.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="${pageContext.servletContext.contextPath}/resources/assets/css/sb-admin.css"
+	rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="preloader">
+		<div class="lds-ripple">
+			<div class="lds-pos"></div>
+			<div class="lds-pos"></div>
+		</div>
+	</div>
+	<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5"
+		data-sidebartype="full" data-sidebar-position="absolute"
+		data-header-position="absolute" data-boxed-layout="full">
+
+		<header class="topbar" data-navbarbg="skin5">
+			<nav class="navbar top-navbar navbar-expand-md navbar-dark">
+				<div class="navbar-header" data-logobg="skin6">
+					<a class="navbar-brand" href="index.html"> <b class="logo-icon">
+							<img
+							src="${pageContext.servletContext.contextPath}/resources/assets/plugins/images/logo-icon.png"
+							alt="homepage" />
+					</b> <span class="logo-text"> <img
+							src="${pageContext.servletContext.contextPath}/resources/assets/plugins/images/logo.png"
+							alt="homepage" />
+					</span>
+					</a> <a
+						class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+						href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+				</div>
+				<div class="navbar-collapse collapse" id="navbarSupportedContent"
+					data-navbarbg="skin5">
+					<ul class="navbar-nav ms-auto d-flex align-items-center">
+						<li class=" in">
+							<form
+								class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+								<div class="input-group">
+									<input type="text" class="form-control"
+										placeholder="Search for..." aria-label="Search"
+										aria-describedby="basic-addon2">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="button">
+											<i class="fas fa-search"></i>
+										</button>
+									</div>
+								</div>
+							</form>
+						</li>
+
+					</ul>
+					<ul class="navbar-nav ml-auto ml-md-0">
+						<li class="nav-item dropdown no-arrow"><a
+							class="nav-link dropdown-toggle" href="#" id="userDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <i class="fas fa-user-circle fa-fw"></i>
+						</a>
+							<div class="dropdown-menu dropdown-menu-right"
+								aria-labelledby="userDropdown">
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" data-toggle="modal"
+									data-target="#logoutModal">Logout</a>
+							</div></li>
+					</ul>
+				</div>
+			</nav>
+
+		</header>
+		<aside class="left-sidebar" data-sidebarbg="skin6">
+			<!-- Sidebar scroll-->
+			<div class="scroll-sidebar">
+				<!-- Sidebar navigation-->
+				<nav class="sidebar-nav">
+					<ul id="sidebarnav">
+						<!-- User Profile-->
+						<li class="sidebar-item pt-2"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="index.html" aria-expanded="false"> <i
+								class="far fa-clock" aria-hidden="true"></i> <span
+								class="hide-menu">Homepage</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="profile.html" aria-expanded="false"> <i
+								class="fa fa-user" aria-hidden="true"></i> <span
+								class="hide-menu">Profile</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="employee.html" aria-expanded="false"> <i
+								class="fa fa-table" aria-hidden="true"></i> <span
+								class="hide-menu">Employee</span>
+						</a></li>
+
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="customer.html" aria-expanded="false"> <i
+								class="fa fa-table" aria-hidden="true"></i> <span
+								class="hide-menu">Customer</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="bill.html" aria-expanded="false"> <i
+								class="fa fa-table" aria-hidden="true"></i> <span
+								class="hide-menu">Bill</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="service.html" aria-expanded="false"> <i
+								class="fa fa-table" aria-hidden="true"></i> <span
+								class="hide-menu">Service</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="promotion.html" aria-expanded="false"> <i
+								class="fa fa-table" aria-hidden="true"></i> <span
+								class="hide-menu">Promotion</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="account.html" aria-expanded="false"> <i
+								class="fa fa-table" aria-hidden="true"></i> <span
+								class="hide-menu">Account</span>
+						</a></li>
+						<li class="sidebar-item"><a
+							class="sidebar-link waves-effect waves-dark sidebar-link"
+							href="404.html" aria-expanded="false"> <i
+								class="fa fa-info-circle" aria-hidden="true"></i> <span
+								class="hide-menu">Error 404</span>
+						</a></li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="page-wrapper">
+			<div class="page-breadcrumb bg-white">
+				<div class="row align-items-center">
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+						<h4 class="page-title">Promotion</h4>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="white-box">
+							<h3 class="box-title" style="display: inline; padding-right: 5%;">Promotion</h3>
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+								data-target="#exampleModal">Add Promotion</button>
+							<div class="table-responsive">
+								<table class="table text-nowrap">
+									<thead>
+										<tr>
+											<th class="border-top-0">#</th>
+											<th class="border-top-0">Service's Name</th>
+											<th class="border-top-0">Start date</th>
+											<th class="border-top-0">End date</th>
+											<th class="border-top-0">Discount</th>
+											<th class="border-top-0">Described</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Gội đầu</td>
+											<td>01/04/2021</td>
+											<td>30/04/2021</td>
+											<td>100%</td>
+											<td>Nhân dịp sinh nhật admin, tất cả dịch vụ gội đầu đều
+												miễn phí</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Cắt tóc</td>
+											<td>01/04/2021</td>
+											<td>30/04/2021</td>
+											<td>50%</td>
+											<td>Nhân dịp sinh nhật admin, tất cả dịch vụ cắt tóc đều
+												giảm 50%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<footer class="footer text-center">
+				2021 © Barbershop brought to you by <a href="index.html">wrappixel.com</a>
+			</footer>
+
+		</div>
+
+	</div>
+
+	<!-- modal-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Promotion</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/" method="POST">
+						<div class="form-group">
+							<label for="service-name" class="col-form-label">Service's
+								Name</label> <select class="form-select"
+								aria-label="Default select example" id="service-name" required>
+								<option value="1">Cắt Tóc</option>
+								<option value="2">Gội Đầu</option>
+								<option value="3">Nhuộm Tóc</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="start-date" class="col-form-label">Start Date</label>
+							<input type="date" class="form-control" id="start-date"
+								name="startDate" required>
+						</div>
+						<div class="form-group">
+							<label for="end-date" class="col-form-label">End Date</label> <input
+								type="date" class="form-control" id="end-date" name="endDate"
+								required>
+						</div>
+						<div class="form-group">
+							<label for="discount" class="col-form-label">Discount</label> <input
+								type="number" class="form-control" id="discount" name="discount"
+								required>
+						</div>
+						<div class="form-group">
+							<label for="described" class="col-form-label">Described</label> <input
+								type="text" class="form-control" id="described" name="described">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Apply</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+					<button class="close" type="button" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Select "Logout" below if you are ready
+					to end your current session.</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button"
+						data-dismiss="modal">Cancel</button>
+					<a class="btn btn-primary" href="login.html">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+            $('#exampleModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+                var recipient = button.data('whatever')
+                var modal = $(this)
+                modal.find('.modal-title').text('New message to ' + recipient)
+                modal.find('.modal-body input').val(recipient)
+            })
+        </script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!--End modal-->
+
+	<script
+		src="${pageContext.servletContext.contextPath}/resources/assets/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+
+	<script
+		src="${pageContext.servletContext.contextPath}/resources/assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="${pageContext.servletContext.contextPath}/resources/assets/js/app-style-switcher.js"></script>
+
+	<script
+		src="${pageContext.servletContext.contextPath}/resources/assets/js/waves.js"></script>
+
+	<script
+		src="${pageContext.servletContext.contextPath}/resources/assets/js/sidebarmenu.js"></script>
+
+	<script
+		src="${pageContext.servletContext.contextPath}/resources/assets/js/custom.js"></script>
+</body>
+
+</html>

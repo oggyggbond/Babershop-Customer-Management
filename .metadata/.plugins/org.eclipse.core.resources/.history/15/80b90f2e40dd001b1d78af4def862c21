@@ -1,0 +1,5 @@
+package com.barbershop.repository;
+
+public interface Customer {
+
+}

@@ -1,0 +1,48 @@
+package Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "CT_KHUYENMAI")
+public class PromotionDetails {
+	@Id
+	@GeneratedValue
+	@Column(name = "MACTKM")
+	private Integer maCtkm;
+	@ManyToOne
+	@JoinColumn(name = "MAKM")
+	private Promotion maKm;
+	@ManyToOne
+	@JoinColumn(name = "MADV")
+	private Service tenDv;
+
+	public Integer getMaCtkm() {
+		return maCtkm;
+	}
+
+	public void setMaCtkm(Integer maCtkm) {
+		this.maCtkm = maCtkm;
+	}
+
+	public Promotion getMaKm() {
+		return maKm;
+	}
+
+	public void setMaKm(Promotion maKm) {
+		this.maKm = maKm;
+	}
+
+	public Service getTenDv() {
+		return tenDv;
+	}
+
+	public void setTenDv(Service tenDv) {
+		this.tenDv = tenDv;
+	}
+}

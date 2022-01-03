@@ -1,0 +1,14 @@
+com\barbershop\entity\Role.class
+com\barbershop\entity\Position.class
+com\barbershop\config\JPAConfig.class
+com\barbershop\entity\Promotion.class
+com\barbershop\entity\PromotionDetails.class
+com\barbershop\entity\BillDetails.class
+com\barbershop\entity\Service.class
+com\barbershop\repository\Customer.class
+com\barbershop\entity\Employee.class
+com\barbershop\entity\Bill.class
+com\barbershop\entity\Account.class
+com\barbershop\controller\HomeController.class
+com\barbershop\entity\Customer.class
+com\barbershop\entity\TypeOfCustomer.class

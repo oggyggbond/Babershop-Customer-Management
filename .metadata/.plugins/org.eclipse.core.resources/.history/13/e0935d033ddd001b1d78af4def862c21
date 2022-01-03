@@ -1,0 +1,69 @@
+package Entity;
+
+import java.util.Collection;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "KHUYENMAI")
+public class Promotion {
+	@Id
+	@GeneratedValue
+	@Column(name = "MAKM")
+	private Integer maKm;
+	@Column(name = "NGAYBD")
+	private Date ngayBd;
+	@Column(name = "NGAYKT")
+	private Date ngayKt;
+	@Column(name = "MOTA")
+	private String moTa;
+	@OneToMany(mappedBy = "maKm", fetch = FetchType.EAGER)
+	private Collection<PromotionDetails> ctkm;
+
+	public Integer getMaKm() {
+		return maKm;
+	}
+
+	public void setMaKm(Integer maKm) {
+		this.maKm = maKm;
+	}
+
+	public Date getNgayBd() {
+		return ngayBd;
+	}
+
+	public void setNgayBd(Date ngayBd) {
+		this.ngayBd = ngayBd;
+	}
+
+	public Date getNgayKt() {
+		return ngayKt;
+	}
+
+	public void setNgayKt(Date ngayKt) {
+		this.ngayKt = ngayKt;
+	}
+
+	public String getMoTa() {
+		return moTa;
+	}
+
+	public void setMoTa(String moTa) {
+		this.moTa = moTa;
+	}
+
+	public Collection<PromotionDetails> getCtkm() {
+		return ctkm;
+	}
+
+	public void setCtkm(Collection<PromotionDetails> ctkm) {
+		this.ctkm = ctkm;
+	}
+}

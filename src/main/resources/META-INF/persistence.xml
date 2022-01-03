@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="persistence-data">
+    	<!-- lớp này để mapping class với table trong db -->
+        <class>com.barbershop.entity.Account</class>
+        <class>com.barbershop.entity.Bill</class>
+        <class>com.barbershop.entity.BillDetails</class>
+        <class>com.barbershop.entity.Customer</class>
+        <class>com.barbershop.entity.Employee</class>
+        <class>com.barbershop.entity.Position</class>
+        <class>com.barbershop.entity.Promotion</class>
+        <class>com.barbershop.entity.Role</class>
+        <class>com.barbershop.entity.ServiceEntity</class>
+        <class>com.barbershop.entity.TypeOfCustomer</class>
+    </persistence-unit>
+</persistence>

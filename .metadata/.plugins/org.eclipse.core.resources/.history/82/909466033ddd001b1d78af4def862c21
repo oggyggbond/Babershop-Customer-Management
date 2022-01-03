@@ -1,0 +1,100 @@
+package Entity;
+
+import java.util.Collection;
+import java.util.Currency;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@Table(name = "HOADON")
+public class Bill {
+	@Id
+	@GeneratedValue
+	@Column(name = "MAHD")
+	private Integer maHd;
+	@Column(name = "NGAY")
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "dd/mm/yyyy")
+	private Date ngay;
+	@Column(name = "TRANGTHAI")
+	private Boolean trangThai;
+	@Column(name = "TONGTIEN")
+	private Currency tongTien;
+	@ManyToOne
+	@JoinColumn(name = "MAKH")
+	private Customer hoTenKh;
+	@ManyToOne
+	@JoinColumn(name = "MANV")
+	private Customer hoTenNv;
+	@OneToMany(mappedBy = "tongTien", fetch = FetchType.EAGER)
+	private Collection<BillDetails> cthd;
+
+	public Integer getMaHd() {
+		return maHd;
+	}
+
+	public void setMaHd(Integer maHd) {
+		this.maHd = maHd;
+	}
+
+	public Date getNgay() {
+		return ngay;
+	}
+
+	public void setNgay(Date ngay) {
+		this.ngay = ngay;
+	}
+
+	public Boolean getTrangThai() {
+		return trangThai;
+	}
+
+	public void setTrangThai(Boolean trangThai) {
+		this.trangThai = trangThai;
+	}
+
+	public Currency getTongTien() {
+		return tongTien;
+	}
+
+	public void setTongTien(Currency tongTien) {
+		this.tongTien = tongTien;
+	}
+
+	public Customer getHoTenKh() {
+		return hoTenKh;
+	}
+
+	public void setHoTenKh(Customer hoTenKh) {
+		this.hoTenKh = hoTenKh;
+	}
+
+	public Customer getHoTenNv() {
+		return hoTenNv;
+	}
+
+	public void setHoTenNv(Customer hoTenNv) {
+		this.hoTenNv = hoTenNv;
+	}
+
+	public Collection<BillDetails> getCthd() {
+		return cthd;
+	}
+
+	public void setCthd(Collection<BillDetails> cthd) {
+		this.cthd = cthd;
+	}
+}

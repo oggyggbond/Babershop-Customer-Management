@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/barbershop/config/JPAConfig.java=UTF-8
+encoding//src/main/java/com/barbershop/controller/HomeController.java=UTF-8
+encoding//src/main/java/com/barbershop/controller/admin/AccountController.java=UTF-8
+encoding//src/main/java/com/barbershop/controller/admin/PromotionController.java=UTF-8
+encoding//src/main/java/com/barbershop/utils/SecurityUtil.java=UTF-8
